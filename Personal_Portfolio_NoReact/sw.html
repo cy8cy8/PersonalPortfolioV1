@@ -9,34 +9,168 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>Chenxi: SW Engineer</title>
+    <link rel="stylesheet" href="style/sw.css" />
+    <link rel="stylesheet" href="style/redkeybtn.css" />
+    <link rel="stylesheet" href="style/bluekeybtn.css" />
+    <link rel="stylesheet" href="style/swtitle.css" />
+    <link rel="shortcut icon" href="resource/title_icon.png" type="image/png" />
+    <title>Chenxi - SW Engineer</title>
   </head>
   <!-- Layout: Bootstrap 5 -->
-  <!-- utilities in Bootstrap= CSS -->
+  <!-- utilities in Bootstrap = CSS -->
   <!-- Rule: add base class, then add modifiers -->
   <body>
-    <h1>Chenxi: SW Engineer</h1>
-    <div>
-      <h2 class="text-light bg-success bg-gradient">About Me</h2>
-      <div class="d-flex justify-content-center">
-        <div
-          class="p-3 border border-2 border-success rounded-3 bg-light bg-gradient user-select-all"
-        >
-          After completing an internship at Agilent Technologies in the software
-          marketing team, I developed a keen interest in pursuing a career
-          within the tech industry.
+    <!-- Container to contain video, introduction and modal -->
+    <div class="swBgContainer">
+      <!-- Video background -->
+      <div class="bgContainer">
+        <video autoplay loop muted>
+          <source src="./resource/swbg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <!-- Self introduction -->
+      <div
+        class="swContent row flex-lg-row-reverse align-items-center p-5 py-5 mx-auto"
+      >
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="resource/fdm_headshot1.JPG"
+            class="headshot d-block mx-lg-auto img-fluid mb-5"
+            alt="My head shot"
+            width="600"
+            height="500"
+            loading="lazy"
+          />
         </div>
-        <div
-          class="p-3 border border-2 border-success rounded-3 bg-light bg-gradient user-select-all"
-        >
-          After receiving a high distinction in a programming course during my
-          final semester as an undergraduate, I made the decision to transition
-          into a tech-focused career path. I joined FDM as a Software Developer
-          Graduate to further develop my skills and knowledge in this field.
+        <div class="col-lg-6">
+          <!-- <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I am Chenxi</h1> -->
+          <!-- Text title animation by Carlos Córdova -->
+          <div class="titleContainer">
+            <div class="titleTextContainer">
+              <div class="titleAnimation">
+                <div class="titleAnimationFirst"><div>Chenxi Yang</div></div>
+                <div class="titleAnimationSecond">
+                  <div>Full Stack Engineer</div>
+                </div>
+                <div class="titleAnimationThird"><div>Polyglot</div></div>
+              </div>
+            </div>
+          </div>
+          <p class="lead mb-5">
+            I am a graduate full-stack software developer passionate about
+            building secure application.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button
+              class="button-82-blue-pushable"
+              role="button"
+              data-bs-toggle="modal"
+              data-bs-target="#myStory"
+            >
+              <span class="button-82-blue-shadow"></span>
+              <span class="button-82-blue-edge"></span>
+              <span class="button-82-blue-front text">My Story</span>
+            </button>
+
+            <button
+              class="button-82-pushable"
+              role="button"
+              onclick="navigateToGitHub()"
+            >
+              <span class="button-82-shadow"></span>
+              <span class="button-82-edge"></span>
+              <span class="button-82-front text">GitHub</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: My Story-->
+      <div
+        class="modal fade"
+        id="myStory"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">My Story</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li class="p-1 fw-light">
+                  After completing a software marketing internship, I developed
+                  a keen interest in pursuing a career within the tech industry.
+                </li>
+                <li class="p-1 fw-light">
+                  After receiving a high distinction in a programming course
+                  during my final semester as an undergraduate, I made the
+                  decision to transition into a tech-focused career path.
+                </li>
+                <li class="p-1 fw-light">
+                  I joined FDM as a Software Developer Graduate to further
+                  develop my skills and knowledge in this field.
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Got it!
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Skill Section -->
+    <div class="skill d-md-flex flex-md-equal row">
+      <div
+        class="bg-dark col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center text-white"
+      >
+        <div class="my-3 py-3">
+          <h2 class="display-5">Hard Skills</h2>
+          <p class="lead">Not Another Tech Bro</p>
+        </div>
+        <div
+          class="bg-light shadow-md mx-auto p-4"
+          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+        >
+          <p class="text-dark">Some skills here</p>
+        </div>
+      </div>
+      <div
+        class="bg-light col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center overflow-hidden"
+      >
+        <div class="my-3 p-3">
+          <h2 class="display-5">Soft Skills</h2>
+          <p class="lead">Not a Scrum Addict</p>
+        </div>
+        <div
+          class="bg-dark shadow-sm mx-auto"
+          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+        >
+          <p class="text-light">can you see this</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/sw.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
