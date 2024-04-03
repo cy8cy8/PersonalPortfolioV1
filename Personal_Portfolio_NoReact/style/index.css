@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  height: 100%;
+  margin: 0; /*disable default margin */
+  padding: 0;
+  /* background-image: linear-gradient(
+      210deg,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    ),
+    url("../resource/cyber.jpg");
+  background-position: center;
+  background-size: cover; */
+}
+
+/* to vertically center the image */
+.profileContainer {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+img {
+  /* border-radius: 25px; */
+  transition: border-radius 1.5s, opacity 1.5s, box-shadow 1.5s, transform 1.5s;
+  opacity: 80%;
+  /* border: 50px solid transparent; */
+  border-right-style: hidden;
+  border-bottom-style: hidden;
+  z-index: 1;
+  animation-name: imgOpacity;
+  animation-duration: 1.2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  transform: scale(0.275)
+}
+
+img:hover {
+  /* border: 10px solid rgba(0, 0, 0, 0); */
+  border-left-color: rgba(0, 0, 0, 0.75);
+  border-right-style: hidden;
+  border-bottom-style: hidden;
+  opacity: 100%;
+  border-radius: 300px;
+  box-shadow: 50px 20px 50px rgb(255, 255, 255);
+  cursor: grabbing;
+  transform: scale(0.5);
+  animation-name: shadow;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+img:active {
+  transition: transform 0.2s;
+}
+
+.btnContainer {
+  display: flex;
+}
+
+.button {
+  border: 2px black solid;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 25px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 25px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.swBtn {
+  margin-right: 25px;
+}
+
+.swBtn:hover {
+  background-color: #04aa6d;
+  color: white;
+  border-color: #000;
+}
+
+.appSecBtn:hover {
+  background-color: #0407aa;
+  color: white;
+  border-color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+@keyframes imgOpacity {
+  0% {
+    opacity: 0%;
+    transform: scale(0.5)
+  }
+  10% {
+    opacity: 10%;
+    transform: scale(0.475)
+  }
+  20% {
+    opacity: 20%;
+    transform: scale(0.45)
+  }
+  30% {
+    opacity: 30%;
+    transform: scale(0.425)
+  }
+  40% {
+    opacity: 40%;
+    transform: scale(0.400)
+  }
+  50% {
+    opacity: 50%;
+    transform: scale(0.375)
+  }
+  60% {
+    opacity: 60%;
+    transform: scale(0.350)
+  }
+  70% {
+    opacity: 70%;
+    transform: scale(0.325)
+  }
+  80% {
+    opacity: 80%;
+    transform: scale(0.300)
+  }
+  90% {
+    opacity: 90%;
+    transform: scale(0.275)
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 50px 20px 50px rgb(255, 255, 255);
+  }
+  25% {
+    box-shadow: 50px 20px 45px rgb(255, 255, 255);
+  }
+  50% {
+    box-shadow: 50px 20px 40px rgb(255, 255, 255);
+  }
+  75% {
+    box-shadow: 50px 20px 45px rgb(255, 255, 255);
+  }
+}
+
+@keyframes imgMove {
+  0% {
+  }
+  20% {
+  }
+  40% {
+  }
+  60% {
+  }
+  80% {
+    
+  }
+}
