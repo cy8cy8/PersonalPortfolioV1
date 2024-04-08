@@ -16,123 +16,94 @@
     <link rel="shortcut icon" href="resource/title_icon.png" type="image/png" />
     <title>Chenxi - SW Engineer</title>
   </head>
-  <!-- Layout: Bootstrap 5 -->
-  <!-- utilities in Bootstrap = CSS -->
-  <!-- Rule: add base class, then add modifiers -->
   <body>
-    <!-- Container to contain introduction and modal -->
-    <div class="swBgContainer mx-auto">
-      <!-- Self introduction -->
-      <div
-        class="swContent row flex-lg-row-reverse align-items-center p-5 py-5"
-      >
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img
-            src="resource/headshot.JPG"
-            class="headshot d-block mx-lg-auto img-fluid mb-5"
-            alt="My head shot"
-            width="600"
-            height="500"
-            loading="lazy"
-            onmouseover="changeBg()"
-            onmouseout="restoreBg()"
-          />
-        </div>
-        <div class="col-lg-6">
-          <!-- Text title animation by Carlos Córdova -->
-          <div class="titleContainer">
-            <div class="titleTextContainer">
-              <div class="titleAnimation">
-                <div class="titleAnimationFirst"><div>Chenxi Yang</div></div>
-                <div class="titleAnimationSecond">
-                  <div>Full Stack Engineer</div>
-                </div>
-                <div class="titleAnimationThird"><div>Polyglot</div></div>
-              </div>
-            </div>
-          </div>
-          <p class="pitch lead mb-5">
-            I am a graduate full-stack software developer passionate about
-            building secure application.
-          </p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button
-              class="button-82-blue-pushable"
-              role="button"
-              data-bs-toggle="modal"
-              data-bs-target="#myStory"
-            >
-              <span class="button-82-blue-shadow"></span>
-              <span class="button-82-blue-edge"></span>
-              <span class="button-82-blue-front text">My Story</span>
-            </button>
-
-            <button
-              class="button-82-pushable"
-              role="button"
-              onclick="navigateToGitHub()"
-            >
-              <span class="button-82-shadow"></span>
-              <span class="button-82-edge"></span>
-              <span class="button-82-front text">GitHub</span>
-            </button>
-          </div>
+    <div class="jumbotron allContainer">
+      <div class="container">
+        <h1 class="display-3 text-light mb-1">Hi, I am Chenxi</h1>
+        <p class="lead text-light mb-4">
+          I am a graduate full-stack software developer passionate about
+          building secure application.
+        </p>
+        <!-- Buttons -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button
+            class="button-82-blue-pushable"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#myStory"
+          >
+            <span class="button-82-blue-shadow"></span>
+            <span class="button-82-blue-edge"></span>
+            <span class="button-82-blue-front text">My Story</span>
+          </button>
+          <button
+            class="button-82-pushable"
+            role="button"
+            onclick="navigateToGitHub()"
+          >
+            <span class="button-82-shadow"></span>
+            <span class="button-82-edge"></span>
+            <span class="button-82-front text">GitHub</span>
+          </button>
         </div>
       </div>
+      <div class="bgContainer">
+        <video id="background-video" autoplay loop muted>
+          <source src="./resource/bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
-      <!-- Modal: My Story-->
-      <div
-        class="modal fade"
-        id="myStory"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">My Story</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li class="p-1 fw-light">
-                  After completing a software marketing internship, I developed
-                  a keen interest in pursuing a career within the tech industry.
-                </li>
-                <li class="p-1 fw-light">
-                  After receiving a high distinction in a programming course
-                  during my final semester as an undergraduate, I made the
-                  decision to transition into a tech-focused career path.
-                </li>
-                <li class="p-1 fw-light">
-                  I joined FDM as a Software Developer Graduate to further
-                  develop my skills and knowledge in this field.
-                </li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                Got it!
-              </button>
-            </div>
+    <!-- Modal: My Story-->
+    <div
+      class="modal fade"
+      id="myStory"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">My Story</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li class="p-1 fw-light">
+                After completing a software marketing internship, I developed a
+                keen interest in pursuing a career within the tech industry.
+              </li>
+              <li class="p-1 fw-light">
+                After receiving a high distinction in a programming course
+                during my final semester as an undergraduate, I made the
+                decision to transition into a tech-focused career path.
+              </li>
+              <li class="p-1 fw-light">
+                I joined FDM as a Software Developer Graduate to further develop
+                my skills and knowledge in this field.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Got it!
+            </button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Skill Section -->
 
     <script src="scripts/sw.js"></script>
     <script
