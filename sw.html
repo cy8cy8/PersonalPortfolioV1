@@ -20,31 +20,25 @@
   <!-- utilities in Bootstrap = CSS -->
   <!-- Rule: add base class, then add modifiers -->
   <body>
-    <!-- Container to contain video, introduction and modal -->
-    <div class="swBgContainer">
-      <!-- Video background -->
-      <div class="bgContainer">
-        <video autoplay loop muted>
-          <source src="./resource/swbg.mp4" type="video/mp4" />
-        </video>
-      </div>
-
+    <!-- Container to contain introduction and modal -->
+    <div class="swBgContainer mx-auto">
       <!-- Self introduction -->
       <div
-        class="swContent row flex-lg-row-reverse align-items-center p-5 py-5 mx-auto"
+        class="swContent row flex-lg-row-reverse align-items-center p-5 py-5"
       >
         <div class="col-10 col-sm-8 col-lg-6">
           <img
-            src="resource/fdm_headshot1.JPG"
+            src="resource/headshot.JPG"
             class="headshot d-block mx-lg-auto img-fluid mb-5"
             alt="My head shot"
             width="600"
             height="500"
             loading="lazy"
+            onmouseover="changeBg()"
+            onmouseout="restoreBg()"
           />
         </div>
         <div class="col-lg-6">
-          <!-- <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I am Chenxi</h1> -->
           <!-- Text title animation by Carlos Córdova -->
           <div class="titleContainer">
             <div class="titleTextContainer">
@@ -57,7 +51,7 @@
               </div>
             </div>
           </div>
-          <p class="lead mb-5">
+          <p class="pitch lead mb-5">
             I am a graduate full-stack software developer passionate about
             building secure application.
           </p>
@@ -139,36 +133,6 @@
     </div>
 
     <!-- Skill Section -->
-    <div class="skill d-md-flex flex-md-equal row">
-      <div
-        class="bg-dark col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center text-white"
-      >
-        <div class="my-3 py-3">
-          <h2 class="display-5">Hard Skills</h2>
-          <p class="lead">Not Another Tech Bro</p>
-        </div>
-        <div
-          class="bg-light shadow-md mx-auto p-4"
-          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-        >
-          <p class="text-dark">Some skills here</p>
-        </div>
-      </div>
-      <div
-        class="bg-light col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center overflow-hidden"
-      >
-        <div class="my-3 p-3">
-          <h2 class="display-5">Soft Skills</h2>
-          <p class="lead">Not a Scrum Addict</p>
-        </div>
-        <div
-          class="bg-dark shadow-sm mx-auto"
-          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-        >
-          <p class="text-light">can you see this</p>
-        </div>
-      </div>
-    </div>
 
     <script src="scripts/sw.js"></script>
     <script

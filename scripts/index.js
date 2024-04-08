@@ -7,9 +7,22 @@ const profileBtn = document.querySelector("img");
 const profileBtnHover = document.querySelector("img:hover");
 
 // When profile image button is hovered upon and clicked, background changes to pitch black and 2 new buttons replace the profile image button, with each button navigates to its corresponding page when clicked.
-profileBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+
+// body fades out first, then invoke callback function to bring back body.
+$(document).ready(() => {
+  const $profileBtn = $("img");
+  $profileBtn.on("click", () => {
+    $("body").fadeOut(1000);
+    setTimeout(() => {
+      $("body").fadeIn(750);
+      switchToBtnView();
+    }, 1005);
+  });
+});
+
+const switchToBtnView = () => {
   body.style.background = "#000000";
+  body.style.display = "block";
 
   // Hide the profile photo.
   document.querySelector("img").style.display = "none";
@@ -43,4 +56,4 @@ profileBtn.addEventListener("click", (e) => {
 
   // Finally, append the container to the profileContainer
   profileContainer.appendChild(btnContainerDiv);
-});
+};

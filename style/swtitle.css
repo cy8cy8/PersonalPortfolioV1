@@ -6,7 +6,7 @@
 }
 
 .titleTextContainer {
-  color: #000000;
+  color: #00eeff;
   font-size: 2.5rem;
   text-transform: uppercase;
   display: flex;
@@ -25,17 +25,18 @@
 }
 
 .titleAnimation div:first-child {
-  animation: text-animation 9s infinite;
+  animation: text-animation 10s infinite ;
+  animation-fill-mode: both;
 }
 
 .titleAnimationFirst div {
-  color: #000000;
+  color: #0095ff;
 }
 .titleAnimationSecond div {
   color: #026c06;
 }
 .titleAnimationThird div {
-  color: #ff002f;
+  color: #8f9400;
 }
 
 @keyframes text-animation {

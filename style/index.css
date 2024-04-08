@@ -4,19 +4,11 @@ body {
   height: 100%;
   margin: 0; /*disable default margin */
   padding: 0;
-  /* background-image: linear-gradient(
-      210deg,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 0.9) 100%
-    ),
-    url("../resource/cyber.jpg");
-  background-position: center;
-  background-size: cover; */
 }
 
 /* to vertically center the image */
 .profileContainer {
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +36,7 @@ img {
   animation-duration: 1.2s;
   animation-direction: normal;
   animation-iteration-count: 1;
-  transform: scale(0.275)
+  transform: scale(0.25);
 }
 
 img:hover {
@@ -73,8 +65,8 @@ img:active {
 
 .button {
   border: 2px black solid;
-  background-color: #000;
-  border-radius: 10px;
+  background: #000;
+  border-radius: 20px;
   color: #fff;
   padding: 25px 50px;
   text-align: center;
@@ -93,13 +85,47 @@ img:active {
 }
 
 .swBtn:hover {
-  background-color: #04aa6d;
+  /* background-color: #04aa6d; */
+  background: linear-gradient(
+    to top,
+    rgb(0, 7, 110),
+    rgb(0, 28, 440),
+    rgb(0, 191, 255)
+  );
+  color: white;
+  border-color: #000;
+}
+
+.swBtn:active {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 7, 110),
+    rgb(0, 28, 440),
+    rgb(0, 191, 255)
+  );
   color: white;
   border-color: #000;
 }
 
 .appSecBtn:hover {
-  background-color: #0407aa;
+  /* background-color: #0407aa; */
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 7, 110),
+    rgb(0, 28, 440),
+    rgb(0, 191, 255)
+  );
+  color: white;
+  border-color: #000;
+}
+
+.appSecBtn:active {
+  background: linear-gradient(
+    to top,
+    rgb(0, 7, 110),
+    rgb(0, 28, 440),
+    rgb(0, 191, 255)
+  );
   color: white;
   border-color: #000;
 }
@@ -115,43 +141,83 @@ a:visited {
 @keyframes imgOpacity {
   0% {
     opacity: 0%;
-    transform: scale(0.5)
+    transform: scale(0.5);
+  }
+  5% {
+    opacity: 5%;
+    transform: scale(0.487);
   }
   10% {
     opacity: 10%;
-    transform: scale(0.475)
+    transform: scale(0.475);
+  }
+  15% {
+    opacity: 15%;
+    transform: scale(0.462);
   }
   20% {
     opacity: 20%;
-    transform: scale(0.45)
+    transform: scale(0.45);
+  }
+  25% {
+    opacity: 25%;
+    transform: scale(0.437);
   }
   30% {
     opacity: 30%;
-    transform: scale(0.425)
+    transform: scale(0.425);
+  }
+  35% {
+    opacity: 35%;
+    transform: scale(0.412);
   }
   40% {
     opacity: 40%;
-    transform: scale(0.400)
+    transform: scale(0.4);
+  }
+  45% {
+    opacity: 45%;
+    transform: scale(0.387);
   }
   50% {
     opacity: 50%;
-    transform: scale(0.375)
+    transform: scale(0.375);
+  }
+  55% {
+    opacity: 55%;
+    transform: scale(0.362);
   }
   60% {
     opacity: 60%;
-    transform: scale(0.350)
+    transform: scale(0.35);
+  }
+  65% {
+    opacity: 65%;
+    transform: scale(0.337);
   }
   70% {
     opacity: 70%;
-    transform: scale(0.325)
+    transform: scale(0.325);
+  }
+  75% {
+    opacity: 75%;
+    transform: scale(0.312);
   }
   80% {
     opacity: 80%;
-    transform: scale(0.300)
+    transform: scale(0.3);
+  }
+  85% {
+    opacity: 85%;
+    transform: scale(0.287);
   }
   90% {
     opacity: 90%;
-    transform: scale(0.275)
+    transform: scale(0.275);
+  }
+  95% {
+    opacity: 95%;
+    transform: scale(0.262);
   }
 }
 
@@ -167,19 +233,5 @@ a:visited {
   }
   75% {
     box-shadow: 50px 20px 45px rgb(255, 255, 255);
-  }
-}
-
-@keyframes imgMove {
-  0% {
-  }
-  20% {
-  }
-  40% {
-  }
-  60% {
-  }
-  80% {
-    
   }
 }
