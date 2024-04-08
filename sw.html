@@ -19,13 +19,13 @@
   <body>
     <div class="jumbotron allContainer">
       <div class="container">
-        <h1 class="display-3 text-light mb-1 left">Hi, I am Chenxi</h1>
-        <p class="lead text-light mb-4">
+        <span class="display-2 text-light p-3 title">Hi, I am Chenxi</span>
+        <p class="lead text-light mt-3 mb-3 p-3">
           I am a graduate full-stack software developer passionate about
           building secure application.
         </p>
         <!-- Buttons -->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <div class="d-grid gap-3 d-md-flex justify-content-md-start p-3 btns">
           <button
             class="button-82-blue-pushable"
             role="button"
@@ -36,11 +36,7 @@
             <span class="button-82-blue-edge"></span>
             <span class="button-82-blue-front text">My Story</span>
           </button>
-          <button
-            class="button-82-pushable"
-            role="button"
-            onclick="navigateToGitHub()"
-          >
+          <button class="button-82-pushable" role="button" id="gitHub">
             <span class="button-82-shadow"></span>
             <span class="button-82-edge"></span>
             <span class="button-82-front text">GitHub</span>
@@ -105,6 +101,7 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/sw.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

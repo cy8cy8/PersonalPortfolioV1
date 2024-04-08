@@ -1,8 +1,3 @@
-.headshot {
-  border: 2px solid white;
-  border-radius: 50px;
-}
-
 .allContainer {
   height: 100vh;
   display: flex;
@@ -22,4 +17,12 @@
 
 .container {
   z-index: 1;
+}
+
+span.title, p, .btns {
+  position: relative;
+}
+
+.btns {
+  position: relative;
 }

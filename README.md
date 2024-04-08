@@ -2,35 +2,23 @@
 
 ## Introduction
 
-- My 1st personal portfolio website and my attempt to build a frontend app without a more framework like React (no SPA).
-- **Tech stack**: HTML, CSS (vanilla), Bootstrap, JavaScript (vanilla) and jQuery.
-- No virtual environment / containers set up.
-- `localhost:8000`
+- My 1st personal portfolio website.
+- My 1st attempt to build a frontend app without a framework like React (no SPA).
 
-## Design
+## Tech Stack
 
-### Home Page (`index.html`)
+- HTML
+- **Styles** --> Vanilla CSS, Bootstrap
+- **Language** --> Vanilla JS
+- **Library** --> jQuery
+- **IDE** --> VS Code
+- **Version Control** --> Git, GitHub
+- **Server (localhost)** --> Python (`python -m http.server 8000`)
+- **E2E testing** --> Selenium with Java
 
-- Using HTML, vanilla CSS, vanilla JavaScript and jQuery.
-- `<video>` as video background.
+## E2E Testing with Selenium (Java) Setup
 
-### SW Engineer Page (`sw.html`)
-
-- Using HTML, Vanilla CSS and Bootstrap.
-
-### AppSec Engineer Page (`as.html`)
-
-- Using HTML, CSS (vanilla), and jQuery?
-
-<br>
-
-## E2E Testing with Selenium (Java)
-
-1. Set up a Maven project in the test directory.
-2. Set up TestNG.
-3. Set up page objects.
-4. Create tests and run them.   
-
-## Run on a localhost Sever
-
-`python -m http.server 8000`
+1. Set up test branch.
+2. Set up a Maven project in the test directory.
+3. Set up TestNG.
+4. Set up page objects.
