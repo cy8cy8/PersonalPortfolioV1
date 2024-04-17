@@ -68,6 +68,7 @@ const createSWBtnAndLink = () => {
 const createAppSecBtnAndLink = () => {
   const appSecLink = document.createElement("a");
   appSecLink.href = "as.html";
+  appSecLink.target = "_blank";
   const appSecBtn = document.createElement("button");
   appSecBtn.className = "button appSecBtn";
   appSecBtn.textContent = "AppSec Engineer";

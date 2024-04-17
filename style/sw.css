@@ -8,11 +8,19 @@
   overflow: hidden;
 }
 
-.bgContainer {
+.bgContainer{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
+}
+
+.bgContainer video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .container {

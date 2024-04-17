@@ -8,12 +8,12 @@
 ## Tech Stack
 
 - HTML
-- **Styles** --> Vanilla CSS, Bootstrap
+- **Styles** --> Vanilla CSS, Sass, Bootstrap
 - **Language** --> Vanilla JS
 - **Library** --> jQuery
 - **IDE** --> VS Code
 - **Version Control** --> Git, GitHub
-- **Server (localhost)** --> Python (`python -m http.server 8000`)
+- **Server (localhost)** --> `python -m http.server 8000`
 - **E2E testing** --> Selenium with Java
 
 ## E2E Testing with Selenium (Java) Setup
