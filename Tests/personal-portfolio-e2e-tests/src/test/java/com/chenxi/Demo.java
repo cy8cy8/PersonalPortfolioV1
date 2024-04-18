@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class Demo {
 
-    private static WebDriver driver = new ChromeDriver();
+    private WebDriver driver = new ChromeDriver();
 
     @BeforeTest
     void Setup() {
@@ -31,12 +31,12 @@ public class Demo {
         /*
          * Hover over photo button and click.
          */
-        Thread.sleep(5000); 
+        Thread.sleep(10000); 
         IndexPage indexPage = new IndexPage(driver);
         WebElement profilePictureBtn = driver.findElement(indexPage.getProfilePicBtn());
         Actions action = new Actions(driver);
         action.moveToElement(profilePictureBtn, 0, 0).perform();
-        Thread.sleep(5000); 
+        Thread.sleep(10000); 
         profilePictureBtn.click();
 
         /*
@@ -51,11 +51,13 @@ public class Demo {
         WebElement swBtn = driver.findElement(indexPage.getSwEngineerBtn());
         WebElement appSecBtn = driver.findElement(indexPage.getAppSecEngineerBtn());
         action.moveToElement(swBtn).perform();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         action.moveToElement(appSecBtn).perform();
-        Thread.sleep(3000); 
+        Thread.sleep(4000); 
         action.moveToElement(swBtn).perform();
-        Thread.sleep(1500); 
+        Thread.sleep(2000); 
+        action.clickAndHold(swBtn).perform();
+        Thread.sleep(1000);
         // Making the window switch
         String homeWindow = driver.getWindowHandle();
         assert driver.getWindowHandles().size() == 1;
@@ -75,9 +77,11 @@ public class Demo {
          */
         SwEngineerPage swEngineerPage = new SwEngineerPage(driver);
         WebElement swPageH1Btn = driver.findElement(swEngineerPage.getTitle());
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         action.moveToElement(swPageH1Btn).perform();
         Thread.sleep(3000); 
+        action.clickAndHold(swPageH1Btn).perform();;
+        Thread.sleep(1000); 
         // Open linkedin, close it, then repoen again (due to authwall)
         String swWindow = driver.getWindowHandle();
         for (int i = 0; i < 2; i++) {
@@ -90,7 +94,7 @@ public class Demo {
                     break;
                 }
             }
-            Thread.sleep(5000);
+            Thread.sleep(7000);
             driver.close();
             driver.switchTo().window(swWindow);
         }
@@ -112,7 +116,7 @@ public class Demo {
         action.clickAndHold(myStoryBtn).perform();
         Thread.sleep(1000); 
         myStoryBtn.click();
-        Thread.sleep(2000); 
+        Thread.sleep(10000); 
         WebElement modalCloseBtn = driver.findElement(swEngineerPage.getModalBtn());
         modalCloseBtn.click();
 
@@ -122,9 +126,9 @@ public class Demo {
          */
         WebElement description = driver.findElement(swEngineerPage.getDescription());
         action.moveToElement(gitHubBtn).perform();
-        Thread.sleep(1500); // change duration for demo
+        Thread.sleep(2000); // change duration for demo
         action.clickAndHold(gitHubBtn).perform();
-        Thread.sleep(500); // change duration for demo
+        Thread.sleep(1000); // change duration for demo
         // Switch to newly opened GitHub tab.
         assert driver.getWindowHandles().size() == 2;
         gitHubBtn.click();
@@ -134,17 +138,19 @@ public class Demo {
                 break;
             }
         }
-        Thread.sleep(5000);
+        Thread.sleep(6000);
         driver.close();
         driver.switchTo().window(swWindow);
         assert driver.getTitle().equals("Chenxi - SW Engineer");
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         action.moveToElement(description).doubleClick().build().perform();
+
+
+        // Thread.sleep(120000);
     }
     
     @AfterTest
     void Teardown() throws InterruptedException {
-        Thread.sleep(2000);
         driver.quit();
     }
 }

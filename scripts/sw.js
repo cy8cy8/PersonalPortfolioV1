@@ -23,7 +23,7 @@ $(document).ready(() => {
       },
       1000
     );
-    // TODO: video bg fades first before window closes
+    $("body").fadeOut(4500);
     
     setTimeout(() => {
       window.close();
