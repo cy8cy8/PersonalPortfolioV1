@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class IndexTest {
 
-    public static WebDriver driver = new ChromeDriver();
+    private static WebDriver driver = new ChromeDriver();
 
     @BeforeTest
     void Setup() {
@@ -31,15 +31,15 @@ public class IndexTest {
     @Test
     void test_BothBtnsPresent() {
         IndexPage indexPage = new IndexPage(driver);
-        WebElement profilePictureBtn = driver.findElement(indexPage.profilePicBtn);
+        WebElement profilePictureBtn = driver.findElement(indexPage.getProfilePicBtn());
         profilePictureBtn.click();
         Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofMillis(1500));
         wait.until(d -> driver
-                .findElement(indexPage.swEngineerBtn));
+                .findElement(indexPage.getSwEngineerBtn()));
         wait.until(d -> driver
-                .findElement(indexPage.appSecEngineerBtn));
-        WebElement swBtn = driver.findElement(indexPage.swEngineerBtn);
-        WebElement appSecBtn = driver.findElement(indexPage.appSecEngineerBtn);
+                .findElement(indexPage.getAppSecEngineerBtn()));
+        WebElement swBtn = driver.findElement(indexPage.getSwEngineerBtn());
+        WebElement appSecBtn = driver.findElement(indexPage.getAppSecEngineerBtn());
         String expectedSwEngineerBtnText = "SW Engineer";
         String expectedAppSecEngineerBtnText = "AppSec Engineer";
         String actualSwEngineerBtnText = swBtn.getText();
@@ -48,10 +48,10 @@ public class IndexTest {
         Assert.assertEquals(actualSwEngineerBtnText, expectedSwEngineerBtnText);
     }
 
-    @Test
-    void test_SWEngineerBtnNavigatesToCorrectPage() {
+    // @Test
+    // void test_SWEngineerBtnNavigatesToCorrectPage() {
         
-    }
+    // }
 
     @AfterTest
     void Teardown() {
